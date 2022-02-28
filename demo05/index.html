@@ -16,7 +16,7 @@
               {
                 React.Children.map(this.props.children, function (child) {
                   return <li>{child}</li>;
-                })
+                })// React.Children is a implict method to simplify the type checking. as nobody know the props.children is a array or undefiend or a object(if one node)
               }
             </ol>
           );

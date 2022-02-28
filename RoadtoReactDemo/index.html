@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../build/react.development.js"></script>
+    <script src="../build/react-dom.development.js"></script>
+    <script src="../build/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+     const title=' 如何轻量使用REACT编程示例'   
+     function App() {
+    return (
+        <div>
+            <h1>{title}</h1>
+         <h1>This is a simple React app</h1>
+        </div>)
+    }
+   
+     const Doubleapp=()=>(
+         <div >
+         < App/>
+        <App/>
+        </div>
+    )   //只允许一个根节点
+
+    
+
+
+      ReactDOM.render(
+        //<h1>Hello, world!</h1>
+        <Doubleapp/>,
+        document.getElementById('example')
+      );//此处实现了多个模块的加载
+    </script>
+  </body>
+</html>

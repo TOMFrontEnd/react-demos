@@ -9,18 +9,29 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      var names = ['Alice', 'Emily', 'Kate'];
+    //   var names = ['Alice', 'Emily', 'Kate'];
 
-      ReactDOM.render(
-        <div>
-        {
-          names.map(function (name, index) {
-            return <div key={index}>Hello, {name}!</div>
-          })
-        }
-        </div>,
-        document.getElementById('example')
-      );
+    //   ReactDOM.render(
+    //     <div> 
+    //     {
+    //       names.map(function (name, index) {
+    //         return <div key={index}>Hello, {name}!</div>
+    //       })
+    //     }
+    //      </div>, //render syntax. , 伴随着位置参数，可以指定元素的位置. 这个DIV 本身是个WRAPPER
+    //     document.getElementById('example')
+    //   );
+    // 
+    // 改写为现代形式
+    const names=['Tom','Jerry','Mike'];
+    ReactDOM.render(
+      //<div>
+        names.map((name,index)=> <div key={index}>Hello,{name}!</div>)
+         , document.getElementById('example')    )
+        
+    // 
     </script>
+     
+    
   </body>
 </html>

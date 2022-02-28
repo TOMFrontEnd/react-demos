@@ -12,13 +12,23 @@
       class HelloMessage extends React.Component {
         render() {
           return <h1>Hello {this.props.name}</h1>;
-        }
+        }//Components would have attributes, and you can use this.props.[attribute] to access them, 
+        //just like this.props.name of <HelloMessage name="John" /> is John
       }
 
       ReactDOM.render(
         <HelloMessage name="John" />,
         document.getElementById('example')
-      );
+      ); // only one top child node is allowed, here only one. this example is wrong
+      // class HelloMessage extends React.Component
+       // render() {
+  //   return <h1>
+  //     Hello {this.props.name}
+  //   </h1><p>
+  //     some text
+  //   </p>;
+  // }
+
     </script>
   </body>
 </html>

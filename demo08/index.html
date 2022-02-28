@@ -15,8 +15,8 @@
           this.state = {
             liked: false
           }
-          this.handleClick = this.handleClick.bind(this)
-        }
+         this.handleClick = this.handleClick.bind(this)
+        }// Bind this, otherwise it will be undefined, as setState changed with this 
         handleClick(event) {
           this.setState({ liked: !this.state.liked });
         }

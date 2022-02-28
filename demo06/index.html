@@ -11,8 +11,8 @@
     <div id="example"></div>
     <script type="text/babel">
 
-      var data = 123;
-
+      var data = 456;
+// display , however has waring as it is a number
       class MyTitle extends React.Component {
         static propTypes = {
           title: PropTypes.string.isRequired,
@@ -30,4 +30,20 @@
     </script>
   </body>
 </html>
+<!-- class MyTitle extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  static defaultProps = {
+    title: 'Hello World',
+  }
+  render() {
+    return <h1> {this.props.title} </h1>;
+  }
+}
+
+ReactDOM.render(
+  <MyTitle />,
+  document.getElementById('example')
+);  -->
 
